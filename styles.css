@@ -1,0 +1,167 @@
+:root{
+	--shadow:rgba(0,0,0);
+	--fontColor:rgb(250,250,250);
+	--submitBackroundColor:rgb(150,50,50);
+	--resetBackroundColor:rgb(50,150,50);
+	--bodyBackground:rgba(0,0,0,.7);
+	--inputBackground:rgba(0,0,0,.2);
+	--cellBackground:rgba(30,30,200,.7);
+}
+
+*{
+	padding:0;
+	border:0;
+	box-sizing:border-box;
+}
+
+body{
+	width:100%;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	background:var(--bodyBackground);
+}
+
+.userInput{
+	display:flex;
+	justify-content:center;
+	margin-left:5%;
+	margin-right:5%;
+	align-items:center;
+	height:5%;
+	width:100%;
+	z-index:1;
+}
+
+.processButton{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	flex:1;
+	height:100%;
+	position:relative;
+}
+
+.inputNumber{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	flex:1;
+	height:100%;
+	position:relative;
+	
+}
+
+.inputNumber p{
+	font-size:1.5rem;
+	font-weight:bold;
+	color:var(--fontColor);
+	margin-left:10px;
+	text-shadow:0px 0px 3px var(--shadow),
+				1px 1px 5px var(--shadow);
+}
+
+.button{
+	display:flex;
+	width:100%;
+	position:relative;
+	justify-content:center;
+	align-items:center;
+	height:100%;
+	box-shadow:2px 2px 5px var(--shadow);
+}
+
+.button:first-child{
+	margin-right:5px;
+}
+
+#submit,
+#reset{
+	font-size:1rem;
+	font-weight:bold;
+	color:var(--fontColor);
+	text-shadow:1px 1px 3px var(--shadow),
+				2px 2px 3px var(--shadow);
+}
+
+#reset{	
+	background:var(--resetBackroundColor);
+}
+
+#submit{
+	background:var(--submitBackroundColor);
+}
+
+
+#submit:hover,
+#reset:hover{
+	text-shadow:none;
+}
+
+#number{
+	border-bottom:3px solid black;
+	width:50%;
+	height:100%;
+	font-size:1.5rem;
+	font-weight:bold;
+	background:var(--inputBackground);
+	color:var(--fontColor)
+}
+
+table{
+	position:absolute;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:100vh;
+}
+
+tr{
+	width:100%;
+	height:100%;
+	justify-content:center;
+	align-items:center;
+	display:flex;
+}
+
+td{
+	width:100%;
+	height:100%;
+	border:1px solid black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:1rem;
+	background:var(--cellBackground);
+	font-weight:bold;
+	color:var(--fontColor);
+}
+
+tbody{
+	border:3px solid black;
+	width:90%;
+	height:88%;
+	justify-content:center;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+
+@media only screen and (min-device-width:320px) and (max-device-width:480px){
+	#number{
+		font-size:1rem;
+	}
+	
+	.inputNumber p{
+		font-size:.7rem;
+	}
+	td{
+		font-size:.5rem;
+	}
+}
+
+
+
+
+
